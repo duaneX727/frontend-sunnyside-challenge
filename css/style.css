@@ -36,16 +36,14 @@ body {
 }
 .container {
   display: grid;
-  grid-template-areas: 
-  "landing"
-  "transform"
-  "stand-out"
-  "graphic-dsgn"
-  "testimonials"
-  "quad-pics"
-  "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: var(--landing) var(--transform) var(--stand-out) var(--graphic-design) var(--testimonials) var(--quad-pics) var(--footer);
+  grid-template: 
+  "landing" var(--landing)
+  "transform" var(--transform)
+  "stand-out" var(--stand-out)
+  "graphic-dsgn" var(--graphic-design)
+  "testimonials" var(--testimonials)
+  "quad-pics" var(--quad-pics)
+  "footer" var(--footer) / 1fr;
   max-width: 144rem;
   min-height: 417.4rem;
  }
@@ -57,12 +55,12 @@ body {
   background-size: cover;
   display: grid;
   grid-area: landing;
-  grid-template-areas: 
-  "logo . navlinks"
-  "hero hero hero"
-  "arrow arrow arrow";
-  grid-template-columns: 11em 1fr 1fr;
-  grid-template-rows: 20% 20% 1fr;
+  grid-template: 
+  "logo . navlinks" 20%
+  "hero hero hero" 20%
+  "arrow arrow arrow" 1fr /
+  11em 1fr 1fr;
+ 
   height: var(--landing);
   width: 100%;
 }
@@ -153,10 +151,8 @@ body {
 #inner-grid-transform {
   display: grid;
   grid-area: transform;
-  grid-template-areas: 
-  "transform-L transform-R";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template: 
+  "transform-L transform-R" auto / 1fr 1fr;
   height: var(--transform);
   text-align: left;
   width: 100%;
@@ -213,10 +209,8 @@ body {
 #inner-grid-stand-out {
   display: grid;
   grid-area: stand-out;
-  grid-template-areas: 
-  "stand-out-L stand-out-R";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template: 
+  "stand-out-L stand-out-R" auto / 1fr 1fr;
   height: var(--stand-out);
   width: 100%;
 }
@@ -272,10 +266,9 @@ body {
   color: var(--Very-dark-desaturated-blue);
   display: grid;
   grid-area: graphic-dsgn;
-  grid-template-areas: 
-  "graphic-design photography";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:auto;
+  grid-template: 
+  "graphic-design photography" auto / 1fr 1fr;
+ 
   height: var(--graphic-design);
   width: 100%;
 }
@@ -319,11 +312,9 @@ body {
   color: var(--Very-dark-desaturated-blue);
   display: grid;
   grid-area: testimonials;
-  grid-template-areas: 
-  ". top . "
-  "testimonials-L testimonials-M testimonials-R";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 530px;
+  grid-template: 
+  ". top . " 25rem
+  "testimonials-L testimonials-M testimonials-R" 53rem / 1fr 1fr 1fr;
   height: var(--testimonials);
   width: 100%;
 }
@@ -382,10 +373,8 @@ body {
 #inner-grid-quad-pics {
   display: grid;
   grid-area: quad-pics;
-  grid-template-areas: 
-  "quad-pics-1 quad-pics-2 quad-pics-3 quad-pics-4";
-  grid-template-columns:repeat(4, 1fr);
-  grid-template-rows:auto;
+  grid-template: 
+  "quad-pics-1 quad-pics-2 quad-pics-3 quad-pics-4" auto / 1fr 1fr 1fr 1fr;
   height: var(--quad-pics);
   width: 100%;
 }
@@ -400,12 +389,10 @@ body {
   background-color: #90d4c5; 
   display: grid;
   grid-area: footer;
-  grid-template-areas: 
-  "logo"
-  "navlinks"
-  "social";
-  grid-template-columns:repeat(1fr);
-  grid-template-rows:15.48rem auto 17.2rem;
+  grid-template: 
+  "logo" 15.48rem
+  "navlinks" auto
+  "social" 17.2rem / 1fr;
   height: var(--footer);
   width: 100%;
 }
