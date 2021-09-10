@@ -94,31 +94,37 @@ body {
   color: white;
   cursor: pointer;
   font-family: 'Barlow', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
-#inner-grid-landing .nav-links a:hover {
-  /* color:var(--Very-dark-desaturated-blue); */
+ #inner-grid-landing .nav-links a:hover {
+   color:var(--Very-dark-desaturated-blue); 
   border:none;
-  font-size: 1.5rem;
+  outline: none;
+  /* font-size: 1.5rem; */
+  color: black;
   font-weight: bolder;
   text-transform: uppercase;
-}
-#inner-grid-landing a:hover::before,
+  z-index: 1;
+  
+} 
+
 #inner-grid-landing a:hover::after
  {
-  background: white;
-  border-radius: 2em;
-  bottom:0;
-  content: '';
-  height: 100%;
-  left:0;
-  opacity: .4;
-  position: absolute;
-  right:0;
-  top:0;
-  width:100px;
-  z-index: -1;
+   content: '';
+   position: absolute;
+   bottom:0;
+   left:-46%;
+   right:0;
+   top:-12px;
+   height: 50px;
+   border-radius: 2em;
+   opacity: 1;
+   background: white;
+   color: black;
+   font-size: 1.5rem;
+   width:190%;
+   z-index: -1;
 }
 /*Hero*/
 .hero-text {
